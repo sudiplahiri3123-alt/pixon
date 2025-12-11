@@ -1,0 +1,77 @@
+==== Benchmarking single operations ====
+Testing resize...
+Applied operation: resize
+All operations applied successfully, saved to pixon/test/benchmark_outputs/resize.jpeg
+Operation resize took 0.856 seconds
+
+Testing rotate...
+Applied operation: rotate
+All operations applied successfully, saved to pixon/test/benchmark_outputs/rotate.jpeg
+Operation rotate took 0.967 seconds
+
+Testing crop...
+Applied operation: crop
+All operations applied successfully, saved to pixon/test/benchmark_outputs/crop.jpeg
+Operation crop took 0.808 seconds
+
+Testing blur...
+Applied operation: blur
+All operations applied successfully, saved to pixon/test/benchmark_outputs/blur.jpeg
+Operation blur took 1.084 seconds
+
+Testing sharpen...
+Applied operation: sharpen
+All operations applied successfully, saved to pixon/test/benchmark_outputs/sharpen.jpeg
+Operation sharpen took 0.974 seconds
+
+Testing flip...
+Applied operation: flip
+All operations applied successfully, saved to pixon/test/benchmark_outputs/flip.jpeg
+Operation flip took 1.022 seconds
+
+Testing flop...
+Applied operation: flop
+All operations applied successfully, saved to pixon/test/benchmark_outputs/flop.jpeg
+Operation flop took 1.036 seconds
+
+Testing composite...
+Applied operation: composite
+All operations applied successfully, saved to pixon/test/benchmark_outputs/composite.jpeg
+Operation composite took 1.060 seconds
+
+Testing coloradjust...
+Applied operation: coloradjust
+All operations applied successfully, saved to pixon/test/benchmark_outputs/coloradjust.jpeg
+Operation coloradjust took 1.052 seconds
+
+Testing addalpha...
+Applied operation: addalpha
+All operations applied successfully, saved to pixon/test/benchmark_outputs/addalpha.png
+Operation addalpha took 3.151 seconds
+
+Testing removealpha...
+Applied operation: removealpha
+All operations applied successfully, saved to pixon/test/benchmark_outputs/removealpha.jpeg
+Operation removealpha took 1.278 seconds
+
+Testing extend...
+Applied operation: extend
+All operations applied successfully, saved to pixon/test/benchmark_outputs/extend.jpeg
+Operation extend took 1.107 seconds
+
+Testing trim...
+Applied operation: trim
+All operations applied successfully, saved to pixon/test/benchmark_outputs/trim.png
+Operation trim took 3.564 seconds
+
+==== Benchmarking multiple operations together ====
+Testing multi_ops...
+Applied operation: resize
+Applied operation: sharpen
+Applied operation: coloradjust
+Applied operation: flip
+Applied operation: composite
+All operations applied successfully, saved to pixon/test/benchmark_outputs/multi_ops.jpeg
+Operation multi_ops took 0.710 seconds
+
+All benchmarks completed. Outputs are in pixon/test/benchmark_outputs/

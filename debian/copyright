@@ -1,0 +1,10 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Pixon
+Upstream-Contact: Sudip Lahiri <sudiplahiri3123@gmail.com>
+Source: https://github.com/sudiplahiri3123-alt/pixon
+
+Files: *
+Copyright: 2025 Sudip Lahiri
+License: Pixon Source-Available License (PSAL) v2.0
+Comment: Redistribution of Pixon is only allowed with explicit permission from the maintainer.
+

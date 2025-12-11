@@ -1,0 +1,15 @@
+Source: pixon
+Section: graphics
+Priority: optional
+Maintainer: Sudip Lahiri <sudiplahiri3123@gmail.com>
+Build-Depends: cmake, g++, libvips-dev, debhelper (>= 12), libopencv-dev
+Standards-Version: 4.5.0
+Homepage: https://github.com/sudiplahiri3123-alt/pixon
+
+Package: pixon
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopencv-core4.6, libopencv-imgproc4.6, libopencv-imgcodecs4.6, libjpeg8, libpng16-16, libtiff5, libwebp7, libopenjp2-7, zlib1g, libzstd1, liblzma5
+Description: High-performance image processing CLI tool
+ Pixon is a fast image processing library supporting resize, rotate, crop, blur,
+ sharpen, flip, flop, composite, coloradjust, alpha operations, extend, and trim.
+
