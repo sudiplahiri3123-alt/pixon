@@ -1,6 +1,3 @@
-Perfect! Here's a polished `docs/installation.md` for your Pixon docs folder:
-
-````markdown
 # Installation
 
 Pixon is a native, high-performance image processing library.  
@@ -8,17 +5,15 @@ This document explains how to install Pixon on Linux via the official PPA and ou
 
 ---
 
-## 🐧 Linux (APT / PPA)
-
-Once the PPA is published, you can install Pixon with:
+## 🐧 Linux (PPA)
 
 ```bash
-sudo add-apt-repository ppa:yourname/pixon
+sudo add-apt-repository ppa:sudip3123/pixon
 sudo apt update
 sudo apt install pixon
 ````
 
-> Replace `yourname` with the Launchpad username you used to create the PPA.
+
 
 This installs the CLI binary and libraries to your system, making `pixon` available globally.
 
@@ -51,9 +46,9 @@ chmod +x install.sh
 
 ## 📌 Notes
 
-* The easiest and recommended method is via the official PPA once available.
-* Development build is intended for testing, contributions, and experimentation.
-* Users do not need to build from source for normal usage; the PPA version suffices.
+* The easiest and recommended method for installing Pixon is via the official PPA.
+* The development build is intended for testing, development contributions, and experimentation.
+* For typical usage, building from source is unnecessary; the PPA version is sufficient.
 
 
 

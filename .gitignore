@@ -43,8 +43,8 @@ node_modules/
 Thumbs.db
 
 # Test outputs
-# /test/test_outputs/
-# /test/benchmark_outputs/
-upload_notes.md
+test/test_outputs/
+test/benchmark_outputs/
+
 
 

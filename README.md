@@ -4,7 +4,7 @@
 
 > A fast, native image processing CLI tool with chainable operations.
 
-Pixon is a lightweight, high-performance image manipulation library built on **C++/OpenCV**.  
+Pixon is a lightweight, high-performance image manipulation library built on **C++**.  
 It supports resizing, cropping, rotating, flipping, color adjustments, brightness enhancement, filters, and more — all via a simple CLI or programmatically in Python, Node.js, and Go.  
 Output formats supported: **PNG, JPG, JPEG, WebP**.
 
@@ -41,18 +41,23 @@ Output formats supported: **PNG, JPG, JPEG, WebP**.
 
 > Builds the project, installs binaries, and configures the linker.
 
-### From APT (Future)
+## From GitHub (Manual Installation)
 
-Once PPA is published:
-<!--
 ```bash
-sudo add-apt-repository ppa:yourname/pixon
+git clone https://github.com/sudiplahiri3123-alt/pixon.git
+cd pixon
+mv docs/development_mode/install.sh install.sh
+chmod +x install.sh
+./install.sh
+```
+
+### From PPA (Recommended for Linux)
+
+```bash
+sudo add-apt-repository ppa:sudip3123/pixon
 sudo apt update
 sudo apt install pixon
 ````
-
--->
-
 
 
 ---
@@ -72,7 +77,7 @@ pixon input.png rotate 90 rotate.jpeg
 pixon input.png crop 50 50 200 150 crop.jpeg
 
 # Blur
-pixon input.png blur 2.5 blur.jpeg
+pixon input.png blur 25 blur.jpeg
 
 # Sharpen
 pixon input.png sharpen sharpen.jpeg
@@ -109,7 +114,7 @@ pixon addalpha.png trim trim.png
 pixon input.png resize 400 300 0 sharpen coloradjust 0.1 1.2 1.3 output1.jpeg
 
 # Flip → Composite → Blur
-pixon input.png flip composite overlay.png 20 20 0.5 blur 2.0 output2.jpeg
+pixon input.png flip composite overlay.png 20 20 0.5 blur 25 output2.jpeg
 
 # Rotate → Extend → Sharpen → Color Adjust
 pixon input.png rotate 180 extend 5 5 5 5 sharpen coloradjust 0.2 1.1 1.0 output3.jpeg
@@ -118,7 +123,7 @@ pixon input.png rotate 180 extend 5 5 5 5 sharpen coloradjust 0.2 1.1 1.0 output
 pixon input.png crop 50 50 200 150 addalpha trim composite overlay.png 0 0 0.8 output4.png
 
 # All operations together
-pixon input.png resize 400 300 0 rotate 90 crop 50 50 200 150 blur 2.0 sharpen flip flop composite overlay.png 10 10 0.5 coloradjust 0.1 1.2 1.3 addalpha removealpha extend 10 10 10 10 trim all_ops.jpeg
+pixon input.png resize 400 300 0 rotate 90 crop 50 50 200 150 blur 25 sharpen flip flop composite overlay.png 10 10 0.5 coloradjust 0.1 1.2 1.3 addalpha removealpha extend 10 10 10 10 trim all_ops.jpeg
 ```
 
 ---
@@ -252,24 +257,24 @@ Pixon is licensed under PSAL v2.0:
 ## Notes
 
 * **Installation:**
-  The easiest way to install Pixon is via the official PPA once available:
+  The easiest way to install Pixon is via the official PPA:
 
-  <!--
+
   ```bash
-  sudo add-apt-repository ppa:yourname/pixon
-  sudo apt update
-  sudo apt install pixon
+    sudo add-apt-repository ppa:sudip3123/pixon
+    sudo apt update
+    sudo apt install pixon
   ```
-  -->
+
 
 * **Dependencies:**
-  Libraries required: OpenCV, libvips, CMake, g++, etc.
-  Installed automatically when using PPA. For development, ensure these are present.
+  OpenCV, libvips, CMake, g++, and other required libraries.
+  These dependencies are **installed automatically** when using the official **PPA**.
+  For development or building from source, ensure they are installed manually.
+
 
 * **Redistribution:**
   Not allowed without explicit permission. Contact maintainer for requests.
-
-
 
 ---
 
@@ -285,8 +290,10 @@ Images may be used, modified, and redistributed in open-source projects.
 
 ![License](https://img.shields.io/badge/License-PSAL%20v2.0-blue)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![GitHub stars](https://img.shields.io/github/stars/sudiplahiri3123-alt/pixon?style=social)
+![GitHub forks](https://img.shields.io/github/forks/sudiplahiri3123-alt/pixon?style=social)
+![GitHub issues](https://img.shields.io/github/issues/sudiplahiri3123-alt/pixon)
 
-<!-- GitHub stats badges can be added after repo push -->
 
 
 ## 🤝 Looking for Contributors

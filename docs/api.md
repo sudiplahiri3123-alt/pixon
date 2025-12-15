@@ -133,6 +133,7 @@ func main() {
 * The examples assume the source images (`input.png`, `overlay.png`) exist in the current working directory.
 * You can chain multiple operations in a single command to improve efficiency.
 
-For a full list of operations and parameters, see the [Operations Table](usage.md#operations--parameters-table).
+For a complete list of available operations and parameters, see the [Operations Table](usage.md#operations--parameters-table).
+
 
 

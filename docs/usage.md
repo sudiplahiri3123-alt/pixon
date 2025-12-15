@@ -19,7 +19,7 @@ pixon input.png rotate 90 output_rotate.jpeg
 pixon input.png crop 50 50 200 150 output_crop.jpeg
 
 # Blur
-pixon input.png blur 2.5 output_blur.jpeg
+pixon input.png blur 25 output_blur.jpeg
 
 # Sharpen
 pixon input.png sharpen output_sharpen.jpeg
@@ -58,7 +58,7 @@ pixon output_alpha.png trim output_trim.png
 pixon input.png resize 400 300 0 sharpen coloradjust 0.1 1.2 1.3 output1.jpeg
 
 # Flip → Composite → Blur
-pixon input.png flip composite overlay.png 20 20 0.5 blur 2.0 output2.jpeg
+pixon input.png flip composite overlay.png 20 20 0.5 blur 25 output2.jpeg
 
 # Rotate → Extend → Sharpen → Color Adjust
 pixon input.png rotate 180 extend 5 5 5 5 sharpen coloradjust 0.2 1.1 1.0 output3.jpeg

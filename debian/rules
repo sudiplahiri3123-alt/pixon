@@ -1,4 +1,37 @@
 #!/usr/bin/make -f
-%:
-	dh $@ --buildsystem=cmake
+# Debian rules file for Pixon
+# Uses dh (debhelper) sequencer
 
+# Default target: delegate to dh
+%:
+	dh $@
+
+# Detect if we are running in Launchpad (optional, based on env variable)
+# LP_BUILD_ENV will be set on Launchpad (or you can use DEB_BUILD_OPTIONS)
+ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),nocheck)
+  SKIP_TEST := 1
+endif
+
+# Clean step: skip clean for PPA/Launchpad, else normal
+override_dh_auto_clean:
+ifeq ($(SKIP_TEST),1)
+	echo "Skipping clean (Launchpad)"
+else
+	dh_auto_clean
+endif
+
+# Build step: always build locally
+override_dh_auto_build:
+	dh_auto_build
+
+# Install step: always install files for binary package
+override_dh_auto_install:
+	dh_auto_install
+
+# Test step: skip tests on Launchpad, run locally
+override_dh_auto_test:
+ifeq ($(SKIP_TEST),1)
+	echo "Skipping tests (Launchpad)"
+else
+	dh_auto_test
+endif

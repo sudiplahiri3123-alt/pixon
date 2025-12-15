@@ -2,7 +2,7 @@
 
 Welcome to the Pixon documentation!  
 
-Pixon is a high-performance image processing library and CLI tool built in C++/OpenCV.  
+Pixon is a high-performance image processing library and CLI tool built in C++.  
 It supports operations like resizing, cropping, rotating, flipping, color adjustments, filters, and more.  
 
 ## Quick Links
